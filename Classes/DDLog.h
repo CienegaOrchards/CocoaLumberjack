@@ -157,7 +157,7 @@ NSString * DDExtractFileNameWithoutExtension(const char *filePath, BOOL copy);
  * It is suggested you stick with the macros as they're easier to use.
  **/
 
-+ (void)log:(BOOL)synchronous
++ (void)log:(BOOL)asynchronous
       level:(DDLogLevel)level
        flag:(DDLogFlag)flag
     context:(NSInteger)context
@@ -483,7 +483,7 @@ typedef NS_OPTIONS(NSInteger, DDLogMessageOptions) {
                            line:(NSUInteger)line
                             tag:(id)tag
                         options:(DDLogMessageOptions)options
-                      timestamp:(NSDate *)timestamp NS_DESIGNATED_INITIALIZER;
+                      timestamp:(NSDate *)timestamp;
 
 /**
  * Read-only properties
